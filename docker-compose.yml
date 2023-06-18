@@ -8,6 +8,7 @@ services:
     volumes:
       - prometheus-data:/prometheus
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alerts.yaml:/prometheus/alerts/alerts.yaml
 
   grafana:
     image: grafana/grafana
